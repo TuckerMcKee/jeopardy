@@ -1,0 +1,97 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+* {
+  background-color: #115ff4;
+}
+body {
+  display: block;
+}
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+}
+#btnContainer {
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: #8d2ab5;
+  color: white;
+  position: relative;
+  width: 80px;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 2em;
+}
+#boardContainer {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+td {
+  text-align: center;
+  border: 5px solid #dee739;
+  width: 100px;
+  height: 80px;
+  margin: 0;
+}
+table {
+  font-family: Helvetica, sans-serif;
+  font-size: .8rem;
+  width: 90vw;
+  height: 70vh;
+}
+tr:first-of-type {
+  font-size: 1.2rem;
+  text-shadow: gold 1px 1px;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.hidden {
+  display: none;
+}
+#spinContainer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+#spinner {
+  text-align: center;
+  border: 10px solid rgb(219, 212, 219);
+  border-top: 10px solid rgb(81, 96, 234);
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@media (max-width: 500px) {
+  td {
+    /* text-align: center;
+    border: 5px solid #dee739;
+    width: 100px;
+    height: 90px;
+    margin: 0; */
+    max-height: 80px;
+    min-height: 80px;
+  }
+}
